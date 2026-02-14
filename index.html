@@ -48,25 +48,26 @@
             margin: 15px 0;
             line-height: 1.5;
             animation: fadeIn 2s ease;
-            border-bottom: 1px solid #ffccd5;
-            padding-bottom: 15px;
+            padding-bottom: 10px;
         }
 
         /* Styles for your Personal Note */
         .note-style {
             color: #ff4d6d;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin-top: 15px;
             font-family: 'Arial', sans-serif;
             animation: popIn 1s ease;
             line-height: 1.6;
+            border-top: 2px solid #ffccd5; /* specific separator for the note */
+            padding-top: 20px;
         }
 
         /* Highlight specific romantic words */
         .highlight {
             color: #d63384;
             font-weight: bold;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
         }
 
         .btn-container {
@@ -150,7 +151,7 @@
     <div class="card">
         <h1 id="mainText">Will you be my Valentine? ❤️</h1>
         
-        <img id="loveImage" src="YOUR_IMAGE_LINK_HERE" alt="Us">
+        <img id="loveImage" src="img.png" alt="Us">
         
         <div id="messageContainer"></div>
 
@@ -184,18 +185,30 @@
             btnContainer.style.display = "none";
             image.style.display = "block";
             
-            // Your Personal Message
+            // Updated with BOTH Poems + Your Personal Note
             messageContainer.innerHTML = `
                 <div class="poem-style">
-                    "I love you without knowing how, or when, or from where.
-                    I love you simply, without problems or pride."<br>
-                
+                    "The minute I heard my first love story,<br>
+                    I started looking for you, not knowing how blind that was.<br>
+                    Lovers don't finally meet somewhere.<br>
+                    They're in each other all along."<br>
+                    <small>— Rumi</small>
                 </div>
+
+                <div class="poem-style" style="margin-top: 10px;">
+                    "I carry your heart with me (I carry it in my heart).<br>
+                    I am never without it (anywhere I go you go, my dear;<br>
+                    and whatever is done by only me is your doing, my darling)."<br>
+                    <small>— e.e. cummings</small>
+                </div>
+
                 <div class="note-style">
                     I love you from the depth of my heart.<br>
                     My <span class="highlight">Ardhangini</span>, my <span class="highlight">Pranpriye</span>.<br>
-                    I love to see you smile, I am forever by your side through thick and thin in your ups and down loving you, taking care of you, Trying to make you smile in your tough times, Always standing by your side. You are my best friend, I love you .<br>
                     <br>
+                    I love to see you smile. I am forever by your side through thick and thin, in your ups and downs. Loving you, taking care of you, trying to make you smile in your tough times, always standing by your side. <br>
+                    <br>
+                    You are my best friend. I love you.<br>
                     My Forever, My Valentine. ❤️
                 </div>
             `;
@@ -223,4 +236,3 @@
     </script>
 </body>
 </html>
-
